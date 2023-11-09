@@ -2,6 +2,11 @@
 
 Welcome to the Stock Analysis website! This web application allows you to analyze stock data, view institutional stock holdings, get the latest news on a stock, and explore its cash flow.
 
+![B08861F6-6C0C-4005-B44E-A0BA0EFE49A1](https://github.com/Enigma-52/Stock-Info/assets/95529619/4203f3d9-e7c1-4318-b2e0-dfb4f1a64357)
+
+![FCA8821E-C8CB-4EA9-A560-0177E63C11A8](https://github.com/Enigma-52/Stock-Info/assets/95529619/a4feeb22-2505-481a-b8f9-6bbf24da3a94)
+
+
 ## Features
 
 - **Stock Plot:** Visualize stock data with interactive plots.
