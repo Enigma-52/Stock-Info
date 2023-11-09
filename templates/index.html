@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 8px;
+            width: 200px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #plotly-chart,
+        #stock-holdings,
+        #stock-news,
+        #cash-flow {
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form method="post">
+        <label for="stock">Enter Stock Ticker:</label>
+        <input type="text" id="stock" name="stock" value="{{ stock }}" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="plotly-chart">
+        {{ plot_html | safe }}
+    </div>
+
+    <div id="stock-holdings">
+        <h2>Institutional Stock Holdings</h2>
+        {{ stock_holding_html | safe}}
+    </div>
+
+    <div id="stock-news">
+        <h2>News on the Stock</h2>
+        <ul>
+            {% for news_item in news_list %}
+            <li>
+                <h3><a href="{{ news_item.link }}">{{ news_item.title }}</a></h3>
+                <p>Publisher: {{ news_item.publisher }}</p>
+                <p>Related Tickers: {{ ', '.join(news_item.relatedTickers) }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="cash-flow">
+        <h2>Cash Flow</h2>
+        {{ cash_flow | safe}}
+    </div>
+
+</body>
+
+</html>
+
