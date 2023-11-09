@@ -18,6 +18,12 @@ Welcome to the Stock Analysis website! This web application allows you to analyz
 
 - [Plotly](https://plotly.com/) for interactive plots.
 - HTML, CSS for the frontend.
+- **Flask & Pandas:** Web framework for HTTP requests and data manipulation.
+- **NumPy:** Library for numerical operations.
+- **pandas_datareader & yfinance:** Fetches financial data from the internet.
+- **datetime:** Handles dates and times.
+- **plotly:** Creates interactive plots.
+- **json:** Handles JSON data.
 
 ## How to Run
 
