@@ -33,7 +33,9 @@ Welcome to the Stock Analysis website! This web application allows you to analyz
 ## How to Run
 
 1. Clone the repository.
-2. Open the `index.html` file in your browser.
+2. Run 'pip install -r requirements.txt'
+3. Run the app now by 'python app.py'
+4. The app should be available on : http://127.0.0.1:5000/
 
 ## Contributing
 
